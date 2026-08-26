@@ -75,17 +75,11 @@ Third-party inputs that we cannot redistribute are documented in [DATA_SOURCES.m
 
 Please read this section before reporting that a figure does not regenerate.
 
-**Fully reproducible.** The nowcasting service itself, for any model you have an API key for. The auto-ARIMA baseline, which runs off FRED and the included external snapshot. The LiveBetting Score, which runs off the included Polymarket bucket prices and Federal Reserve nowcast series. All the figure-rendering scripts, given their inputs.
+**Fully reproducible.** The nowcasting service itself, for any model you have an API key for. The auto-ARIMA baseline, which runs off FRED and the included external snapshot. The LiveBetting Score, which runs off the included Polymarket bucket prices and Federal Reserve nowcast series. The Figure 5 nowcast case studies, which render directly from the included data with no extra inputs.
 
 **Reproducible only with a Bloomberg Terminal subscription.** The headline LiveMacro Score and its theme decomposition, meaning Figures 2 and 4. The scoring driver reads `Results/bloomberg_consensus/bloomberg_daily_consensus.csv` and `bloomberg_release_consensus.csv`, which hold the ECOS survey medians. We are not permitted to redistribute those files. Everything else the score needs is in the repository, including the frozen historical betas and sigmas under `step_15_2_historical_preprocessing/` and the event-window returns under `data_sp500futures/`.
 
 **Not yet released.** The paper evaluates four LLM agents. This initial release contains nowcast records for GPT-5 only. The Claude and Qwen records, and the corresponding job definitions, are planned for a later release. The shipped OpenRouter client is a working template, so you can point it at Qwen or any other OpenRouter-served model by changing `MODEL_ID`.
-
-**Known gap.** The two Figure 5 renderers under `Results/remove_outlier_and_plot/` import a shared
-helper module, `generate_plots_serverA_serverB.py`, which is not in this release. Both scripts will
-fail on import until it is added. It supplies `POST_OUTLIER_Z_THRESHOLD`, `_robust_scale`, and
-`remove_outliers`, the canonical outlier-removal logic. The outlier-cleaned data these scripts read
-is already included under `processed_final_analysis_data/`, so only the rendering step is affected.
 
 ## A note on the release calendar
 

@@ -38,3 +38,7 @@ Results/benchmark_econ/external_data_*/raw/*.pdf
 Results/market_surprise_capture_score/**/bloomberg_overlay/
 Results/market_surprise_capture_score/**/huber_final/
 Results/benchmark_econ/results_targets_*/
+
+# Generated figures and diagnostics from the plot scripts
+Results/remove_outlier_and_plot/generated_serverA_serverB/
+Results/remove_outlier_and_plot/outlier_diagnostics_serverA_serverB/

@@ -7,6 +7,17 @@ abstract: >-
   announcement-window equity returns and prediction-market returns.
 type: software
 license: MIT
+version: 1.0.0
+date-released: 2026-08-26
+repository-code: "https://github.com/XinyueZhao777/LiveMacroEval"
+url: "https://github.com/XinyueZhao777/LiveMacroEval"
+keywords:
+  - macroeconomic nowcasting
+  - large language models
+  - LLM agents
+  - live benchmark
+  - data contamination
+  - event study
 authors:
   - family-names: Zhao
     given-names: Xinyue
@@ -32,6 +43,9 @@ preferred-citation:
     Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM
     Nowcasts on Macroeconomic Indicators
   year: 2026
+  collection-title: >-
+    Proceedings of the 2026 Conference on Empirical Methods in Natural Language
+    Processing (EMNLP 2026)
   authors:
     - family-names: Zhao
       given-names: Xinyue
