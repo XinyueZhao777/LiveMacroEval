@@ -1,0 +1,41 @@
+==============================================================================
+Step 15.1 Required mapping layer — report
+==============================================================================
+Mapping rows:     16
+Active rows:      16
+Transform rules:  {'identity': 11, 'multiply:1000': 5}
+
+-- full mapping --
+             field_id                 package_name             calendar_event_name                                     calendar_units       model_output_source model_transform_rule  active_flag
+     real_gdp_advance                          gdp                       GDP (QoQ)                                         % QoQ SAAR              real_gdp_qoq             identity         True
+industrial_production        industrial_production     Industrial Production (MoM)                                              % MoM industrial_production_mom             identity         True
+        durable_goods                durable_goods      Durable Goods Orders (MoM)                                              % MoM         durable_goods_mom             identity         True
+    ism_manufacturing            ism_manufacturing           ISM Manufacturing PMI                                        index level   ism_manufacturing_index             identity         True
+                  cpi                          cpi                       CPI (YoY)                                              % YoY                   cpi_yoy             identity         True
+                  ppi                          ppi                       PPI (MoM)                                              % MoM                   ppi_mom             identity         True
+      pce_price_index      personal_income_outlays           PCE price index (MoM)                                              % MoM       pce_price_index_mom             identity         True
+             real_pce      personal_income_outlays Real Personal Consumption (MoM)                                              % MoM              real_pce_mom             identity         True
+         retail_sales                 retail_sales              Retail Sales (MoM)                                              % MoM          retail_sales_mom             identity         True
+     nonfarm_payrolls         employment_situation                Nonfarm Payrolls headcount level change (calendar stores raw count)   nonfarm_payrolls_change        multiply:1000         True
+    unemployment_rate         employment_situation               Unemployment Rate                                            % level         unemployment_rate             identity         True
+       housing_starts new_residential_construction                  Housing Starts             SAAR level (calendar stores raw count)      housing_starts_level        multiply:1000         True
+     building_permits new_residential_construction                Building Permits             SAAR level (calendar stores raw count)    building_permits_level        multiply:1000         True
+  existing_home_sales          existing_home_sales             Existing Home Sales             SAAR level (calendar stores raw count) existing_home_sales_level        multiply:1000         True
+       new_home_sales               new_home_sales                  New Home Sales             SAAR level (calendar stores raw count)      new_home_sales_level        multiply:1000         True
+         ism_services                 ism_services       ISM Non-Manufacturing PMI                                        index level        ism_services_index             identity         True
+
+-- rows with calendar_event_name fallbacks: 1 --
+       field_id   calendar_event_name calendar_event_name_fallbacks
+pce_price_index PCE price index (MoM)            PCE Deflator (MoM)
+
+Known calendar-side concessions (not scoring fallbacks):
+  * pce_price_index: PCE Deflator (MoM) and PCE price index (MoM)
+    are the same BEA series; Investing.com renamed the label in
+    2019-08. Both names are treated as the same series, mirroring
+    step 15.2's priority list. This is a calendar-side identity
+    decision, not a scoring-time fallback.
+
+Consistency contract:
+  * field_id set and calendar_event_name set MUST match the MAPPING
+    hard-coded in step_15_2_historical_preprocessing/preprocess_historical.py.
+  * test_mapping.py verifies this.

@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Secrets — never commit API keys
+.env
+.env.*
+*.key
+credentials.json
+
+# Runtime output from the nowcasting service
+LiveMacro/logs/
+LiveMacro/backend/control/
+backend.log*
+
+# Licensed third-party inputs (see DATA_SOURCES.md)
+Results/bloomberg_consensus/
+Results/data_sp500futures/*.parquet
+Results/data_consensus/investing_us_calendar_*.csv
+Results/ground_truth/data/investing_us_calendar_*.csv
+Results/benchmark_econ/external_data_*/raw/*.html
+Results/benchmark_econ/external_data_*/raw/*.pdf
+
+# Generated scoring output
+Results/market_surprise_capture_score/**/bloomberg_overlay/
+Results/market_surprise_capture_score/**/huber_final/
+Results/benchmark_econ/results_targets_*/

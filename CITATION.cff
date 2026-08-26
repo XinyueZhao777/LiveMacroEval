@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use LiveMacroEval, please cite the paper below."
+title: "LiveMacroEval"
+abstract: >-
+  A live, contamination-resistant benchmark for evaluating LLM agents on
+  U.S. macroeconomic nowcasting, with market-based scoring against
+  announcement-window equity returns and prediction-market returns.
+type: software
+license: MIT
+authors:
+  - family-names: Zhao
+    given-names: Xinyue
+    affiliation: Georgia Institute of Technology
+  - family-names: Zhang
+    given-names: Ruiyi
+    affiliation: University of California San Diego
+  - family-names: Ye
+    given-names: Liqin
+    affiliation: Georgia Institute of Technology
+  - family-names: Cao
+    given-names: Rui
+    affiliation: Georgia Institute of Technology
+  - family-names: Xie
+    given-names: Pengtao
+    affiliation: University of California San Diego
+  - family-names: Chava
+    given-names: Sudheer
+    affiliation: Georgia Institute of Technology
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM
+    Nowcasts on Macroeconomic Indicators
+  year: 2026
+  authors:
+    - family-names: Zhao
+      given-names: Xinyue
+    - family-names: Zhang
+      given-names: Ruiyi
+    - family-names: Ye
+      given-names: Liqin
+    - family-names: Cao
+      given-names: Rui
+    - family-names: Xie
+      given-names: Pengtao
+    - family-names: Chava
+      given-names: Sudheer

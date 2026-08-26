@@ -1,0 +1,17 @@
+field_id,package_name,calendar_event_name,calendar_event_name_fallbacks,calendar_units,model_output_source,model_transform_rule,active_flag,notes
+real_gdp_advance,gdp,GDP (QoQ),,% QoQ SAAR,real_gdp_qoq,identity,True,Keep only ADVANCE release (earliest of 3 same-Q# releases per reference quarter); filter applied in step 15.2.
+industrial_production,industrial_production,Industrial Production (MoM),,% MoM,industrial_production_mom,identity,True,
+durable_goods,durable_goods,Durable Goods Orders (MoM),,% MoM,durable_goods_mom,identity,True,
+ism_manufacturing,ism_manufacturing,ISM Manufacturing PMI,,index level,ism_manufacturing_index,identity,True,
+cpi,cpi,CPI (YoY),,% YoY,cpi_yoy,identity,True,Headline YoY (using the YoY series rather than MoM SA).
+ppi,ppi,PPI (MoM),,% MoM,ppi_mom,identity,True,
+pce_price_index,personal_income_outlays,PCE price index (MoM),PCE Deflator (MoM),% MoM,pce_price_index_mom,identity,True,Concatenate PCE Deflator (MoM) pre-2019-08 and PCE price index (MoM) post-2019-08 (same BEA series renamed by Investing.com; prefer PCE price index on any overlap). Mirrors the priority list in step 15.2 so both names collapse to this field_id.
+real_pce,personal_income_outlays,Real Personal Consumption (MoM),,% MoM,real_pce_mom,identity,True,
+retail_sales,retail_sales,Retail Sales (MoM),,% MoM,retail_sales_mom,identity,True,
+nonfarm_payrolls,employment_situation,Nonfarm Payrolls,,headcount level change (calendar stores raw count),nonfarm_payrolls_change,multiply:1000,True,"Model emits thousands (K). Calendar stores raw headcount change (e.g., 252000.0 for Jan-2015). Multiply model by 1000 to match."
+unemployment_rate,employment_situation,Unemployment Rate,,% level,unemployment_rate,identity,True,
+housing_starts,new_residential_construction,Housing Starts,,SAAR level (calendar stores raw count),housing_starts_level,multiply:1000,True,"Model emits thousands (K SAAR). Calendar stores raw count SAAR (e.g., 1089000.0 for Jan-2015). Multiply model by 1000 to match."
+building_permits,new_residential_construction,Building Permits,,SAAR level (calendar stores raw count),building_permits_level,multiply:1000,True,"All releases with valid A+C+r are kept; outline does not restrict to 08:30. From 2023 onward the revised release is a separate timestamp-group event. Model emits K SAAR; calendar stores raw count SAAR (e.g., 1032000.0 for Jan-2015). Multiply by 1000."
+existing_home_sales,existing_home_sales,Existing Home Sales,,SAAR level (calendar stores raw count),existing_home_sales_level,multiply:1000,True,"Model emits K SAAR (e.g., 4090). Calendar stores raw count SAAR (e.g., 5040000.0 for Jan-2015). Multiply model by 1000."
+new_home_sales,new_home_sales,New Home Sales,,SAAR level (calendar stores raw count),new_home_sales_level,multiply:1000,True,"Model emits K SAAR (e.g., 605). Calendar stores raw count SAAR (e.g., 481000.0 for Jan-2015). Multiply model by 1000."
+ism_services,ism_services,ISM Non-Manufacturing PMI,,index level,ism_services_index,identity,True,Investing.com uses the legacy 'Non-Manufacturing' label for ISM Services.

@@ -1,0 +1,104 @@
+field_id,release_datetime_et,event,ref_period,A,C,raw_surprise
+ism_manufacturing,2025-11-03 10:00:00,ISM Manufacturing PMI  (Oct),2025-10,48.7,49.4,-0.6999999999999957
+ism_services,2025-11-05 10:00:00,ISM Non-Manufacturing PMI  (Oct),2025-10,52.4,50.7,1.6999999999999957
+nonfarm_payrolls,2025-11-20 08:30:00,Nonfarm Payrolls  (Sep),2025-09,119000.0,53000.0,66000.0
+unemployment_rate,2025-11-20 08:30:00,Unemployment Rate  (Sep),2025-09,4.4,4.3,0.10000000000000053
+existing_home_sales,2025-11-20 10:00:00,Existing Home Sales  (Oct),2025-10,4100000.0,4080000.0,20000.0
+ppi,2025-11-25 08:30:00,PPI (MoM)  (Sep),2025-09,0.3,0.3,0.0
+retail_sales,2025-11-25 08:30:00,Retail Sales (MoM)  (Sep),2025-09,0.2,0.4,-0.2
+durable_goods,2025-11-26 08:30:00,Durable Goods Orders (MoM)  (Sep),2025-09,0.5,0.5,0.0
+ism_manufacturing,2025-12-01 10:00:00,ISM Manufacturing PMI  (Nov),2025-11,48.2,49.0,-0.7999999999999972
+industrial_production,2025-12-03 09:15:00,Industrial Production (MoM)  (Sep),2025-09,0.1,0.1,0.0
+ism_services,2025-12-03 10:00:00,ISM Non-Manufacturing PMI  (Nov),2025-11,52.6,52.0,0.6000000000000014
+pce_price_index,2025-12-05 10:00:00,PCE price index (MoM)  (Sep),2025-09,0.3,0.3,0.0
+real_pce,2025-12-05 10:00:00,Real Personal Consumption (MoM)  (Sep),2025-09,0.0,0.1,-0.1
+nonfarm_payrolls,2025-12-16 08:29:00,Nonfarm Payrolls  (Oct),2025-10,-105000.0,,
+nonfarm_payrolls,2025-12-16 08:30:00,Nonfarm Payrolls  (Nov),2025-11,64000.0,51000.0,13000.0
+retail_sales,2025-12-16 08:30:00,Retail Sales (MoM)  (Oct),2025-10,0.0,0.1,-0.1
+unemployment_rate,2025-12-16 08:30:00,Unemployment Rate  (Nov),2025-11,4.6,4.5,0.09999999999999964
+cpi,2025-12-18 08:30:00,CPI (YoY)  (Nov),2025-11,2.7,3.1,-0.3999999999999999
+existing_home_sales,2025-12-19 10:00:00,Existing Home Sales  (Nov),2025-11,4130000.0,4150000.000000001,-20000.00000000093
+durable_goods,2025-12-23 08:30:00,Durable Goods Orders (MoM)  (Oct),2025-10,-2.2,-1.5,-0.7000000000000002
+real_gdp_advance,2025-12-23 08:30:00,GDP (QoQ)  (Q3),2025-Q3,4.3,3.3,1.0
+industrial_production,2025-12-23 09:14:00,Industrial Production (MoM)  (Oct),2025-10,-0.1,0.1,-0.2
+industrial_production,2025-12-23 09:15:00,Industrial Production (MoM)  (Nov),2025-11,0.2,,
+ism_manufacturing,2026-01-05 10:00:00,ISM Manufacturing PMI  (Dec),2025-12,47.9,48.3,-0.3999999999999986
+ism_services,2026-01-07 10:00:00,ISM Non-Manufacturing PMI  (Dec),2025-12,54.4,52.2,2.1999999999999957
+building_permits,2026-01-09 08:29:00,Building Permits  (Sep),2025-09,1415000.0,1350000.0,65000.0
+housing_starts,2026-01-09 08:29:00,Housing Starts  (Sep),2025-09,1306000.0,1330000.0,-24000.0
+building_permits,2026-01-09 08:30:00,Building Permits  (Oct),2025-10,1412000.0,1415000.0,-3000.0
+housing_starts,2026-01-09 08:30:00,Housing Starts  (Oct),2025-10,1246000.0,,
+nonfarm_payrolls,2026-01-09 08:30:00,Nonfarm Payrolls  (Dec),2025-12,50000.0,66000.0,-16000.0
+unemployment_rate,2026-01-09 08:30:00,Unemployment Rate  (Dec),2025-12,4.4,4.5,-0.09999999999999964
+cpi,2026-01-13 08:30:00,CPI (YoY)  (Dec),2025-12,2.7,2.7,0.0
+new_home_sales,2026-01-13 09:59:00,New Home Sales  (Sep),2025-09,738000.0,,
+new_home_sales,2026-01-13 10:00:00,New Home Sales  (Oct),2025-10,737000.0,716000.0,21000.0
+ppi,2026-01-14 08:29:00,PPI (MoM)  (Oct),2025-10,0.1,,
+ppi,2026-01-14 08:30:00,PPI (MoM)  (Nov),2025-11,0.2,0.2,0.0
+retail_sales,2026-01-14 08:30:00,Retail Sales (MoM)  (Nov),2025-11,0.6,0.5,0.09999999999999998
+existing_home_sales,2026-01-14 10:00:00,Existing Home Sales  (Dec),2025-12,4350000.0,4210000.0,140000.0
+industrial_production,2026-01-16 09:15:00,Industrial Production (MoM)  (Dec),2025-12,0.4,0.1,0.30000000000000004
+pce_price_index,2026-01-22 09:59:00,PCE price index (MoM)  (Oct),2025-10,0.2,0.2,0.0
+pce_price_index,2026-01-22 10:00:00,PCE price index (MoM)  (Nov),2025-11,0.2,0.2,0.0
+real_pce,2026-01-22 10:00:00,Real Personal Consumption (MoM)  (Nov),2025-11,0.3,0.3,0.0
+durable_goods,2026-01-26 08:30:00,Durable Goods Orders (MoM)  (Nov),2025-11,5.3,3.1,2.1999999999999997
+ppi,2026-01-30 08:30:00,PPI (MoM)  (Dec),2025-12,0.5,0.2,0.3
+ism_manufacturing,2026-02-02 10:00:00,ISM Manufacturing PMI  (Jan),2026-01,52.6,48.5,4.100000000000001
+ism_services,2026-02-04 10:00:00,ISM Non-Manufacturing PMI  (Jan),2026-01,53.8,53.5,0.29999999999999716
+retail_sales,2026-02-10 08:30:00,Retail Sales (MoM)  (Dec),2025-12,0.0,0.4,-0.4
+nonfarm_payrolls,2026-02-11 08:30:00,Nonfarm Payrolls  (Jan),2026-01,130000.0,66000.0,64000.0
+unemployment_rate,2026-02-11 08:30:00,Unemployment Rate  (Jan),2026-01,4.3,4.4,-0.10000000000000053
+existing_home_sales,2026-02-12 10:00:00,Existing Home Sales  (Jan),2026-01,3910000.0,4160000.0,-250000.0
+cpi,2026-02-13 08:30:00,CPI (YoY)  (Jan),2026-01,2.4,2.5,-0.10000000000000009
+building_permits,2026-02-18 08:29:00,Building Permits  (Nov),2025-11,1388000.0,,
+housing_starts,2026-02-18 08:29:00,Housing Starts  (Nov),2025-11,1322000.0,,
+building_permits,2026-02-18 08:30:00,Building Permits  (Dec),2025-12,1448000.0,1400000.0,48000.0
+durable_goods,2026-02-18 08:30:00,Durable Goods Orders (MoM)  (Dec),2025-12,-1.4,-1.8,0.40000000000000013
+housing_starts,2026-02-18 08:30:00,Housing Starts  (Dec),2025-12,1404000.0,1310000.0,94000.0
+industrial_production,2026-02-18 09:15:00,Industrial Production (MoM)  (Jan),2026-01,0.7,0.4,0.29999999999999993
+pce_price_index,2026-02-20 08:30:00,PCE price index (MoM)  (Dec),2025-12,0.4,0.3,0.10000000000000003
+real_gdp_advance,2026-02-20 08:30:00,GDP (QoQ)  (Q4),2025-Q4,1.4,2.8,-1.4
+real_pce,2026-02-20 08:30:00,Real Personal Consumption (MoM)  (Dec),2025-12,0.1,0.1,0.0
+new_home_sales,2026-02-20 09:59:00,New Home Sales  (Nov),2025-11,758000.0,,
+new_home_sales,2026-02-20 10:00:00,New Home Sales  (Dec),2025-12,745000.0,732000.0,13000.0
+ppi,2026-02-27 08:30:00,PPI (MoM)  (Jan),2026-01,0.5,0.3,0.2
+ism_manufacturing,2026-03-02 10:00:00,ISM Manufacturing PMI  (Feb),2026-02,52.4,51.7,0.6999999999999957
+ism_services,2026-03-04 10:00:00,ISM Non-Manufacturing PMI  (Feb),2026-02,56.1,53.5,2.6000000000000014
+nonfarm_payrolls,2026-03-06 08:30:00,Nonfarm Payrolls  (Feb),2026-02,-92000.0,58000.0,-150000.0
+retail_sales,2026-03-06 08:30:00,Retail Sales (MoM)  (Jan),2026-01,-0.2,-0.3,0.09999999999999998
+unemployment_rate,2026-03-06 08:30:00,Unemployment Rate  (Feb),2026-02,4.4,4.3,0.10000000000000053
+existing_home_sales,2026-03-10 10:00:00,Existing Home Sales  (Feb),2026-02,4090000.0,3890000.0,200000.0
+cpi,2026-03-11 08:30:00,CPI (YoY)  (Feb),2026-02,2.4,2.4,0.0
+building_permits,2026-03-12 08:30:00,Building Permits  (Jan),2026-01,1376000.0,1420000.0,-44000.0
+housing_starts,2026-03-12 08:30:00,Housing Starts  (Jan),2026-01,1487000.0,1340000.0,147000.0
+durable_goods,2026-03-13 08:30:00,Durable Goods Orders (MoM)  (Jan),2026-01,0.0,1.1,-1.1
+pce_price_index,2026-03-13 08:30:00,PCE price index (MoM)  (Jan),2026-01,0.3,0.3,0.0
+real_pce,2026-03-13 08:30:00,Real Personal Consumption (MoM)  (Jan),2026-01,0.1,0.0,0.1
+industrial_production,2026-03-16 09:15:00,Industrial Production (MoM)  (Feb),2026-02,0.2,0.1,0.1
+ppi,2026-03-18 08:30:00,PPI (MoM)  (Feb),2026-02,0.7,0.3,0.39999999999999997
+new_home_sales,2026-03-19 10:00:00,New Home Sales  (Jan),2026-01,587000.0,722000.0,-135000.0
+retail_sales,2026-04-01 08:30:00,Retail Sales (MoM)  (Feb),2026-02,0.6,0.5,0.09999999999999998
+ism_manufacturing,2026-04-01 10:00:00,ISM Manufacturing PMI  (Mar),2026-03,52.7,52.3,0.4000000000000057
+nonfarm_payrolls,2026-04-03 08:30:00,Nonfarm Payrolls  (Mar),2026-03,178000.0,65000.0,113000.0
+unemployment_rate,2026-04-03 08:30:00,Unemployment Rate  (Mar),2026-03,4.3,4.4,-0.10000000000000053
+ism_services,2026-04-06 10:00:00,ISM Non-Manufacturing PMI  (Mar),2026-03,54.0,54.8,-0.7999999999999972
+durable_goods,2026-04-07 08:30:00,Durable Goods Orders (MoM)  (Feb),2026-02,-1.4,-1.1,-0.2999999999999998
+pce_price_index,2026-04-09 08:30:00,PCE price index (MoM)  (Feb),2026-02,0.4,0.4,0.0
+real_pce,2026-04-09 08:30:00,Real Personal Consumption (MoM)  (Feb),2026-02,0.1,,
+cpi,2026-04-10 08:30:00,CPI (YoY)  (Mar),2026-03,3.3,3.4,-0.10000000000000009
+existing_home_sales,2026-04-13 10:00:00,Existing Home Sales  (Mar),2026-03,3980000.0,4070000.000000001,-90000.00000000093
+ppi,2026-04-14 08:30:00,PPI (MoM)  (Mar),2026-03,0.5,1.1,-0.6000000000000001
+industrial_production,2026-04-16 09:15:00,Industrial Production (MoM)  (Mar),2026-03,-0.5,0.1,-0.6
+retail_sales,2026-04-21 08:30:00,Retail Sales (MoM)  (Mar),2026-03,1.7,1.4,0.30000000000000004
+building_permits,2026-04-29 08:29:00,Building Permits  (Feb),2026-02,1538000.0,,
+housing_starts,2026-04-29 08:29:00,Housing Starts  (Feb),2026-02,1356000.0,,
+building_permits,2026-04-29 08:30:00,Building Permits  (Mar),2026-03,1372000.0,1390000.0,-18000.0
+durable_goods,2026-04-29 08:30:00,Durable Goods Orders (MoM)  (Mar),2026-03,0.8,0.4,0.4
+housing_starts,2026-04-29 08:30:00,Housing Starts  (Mar),2026-03,1502000.0,1380000.0,122000.0
+pce_price_index,2026-04-30 08:30:00,PCE price index (MoM)  (Mar),2026-03,0.7,0.7,0.0
+real_gdp_advance,2026-04-30 08:30:00,GDP (QoQ)  (Q1),2026-Q1,2.0,2.2,-0.20000000000000018
+real_pce,2026-04-30 08:30:00,Real Personal Consumption (MoM)  (Mar),2026-03,0.2,,
+ism_manufacturing,2026-05-01 10:00:00,ISM Manufacturing PMI  (Apr),2026-04,52.7,53.1,-0.3999999999999986
+new_home_sales,2026-05-05 09:59:00,New Home Sales  (Feb),2026-02,635000.0,,
+ism_services,2026-05-05 10:00:00,ISM Non-Manufacturing PMI  (Apr),2026-04,53.6,53.7,-0.10000000000000142
+new_home_sales,2026-05-05 10:00:00,New Home Sales  (Mar),2026-03,682000.0,652000.0,30000.0

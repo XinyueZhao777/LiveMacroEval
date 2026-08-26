@@ -1,0 +1,17 @@
+field_id,package_name,calendar_event_name,calendar_field_name_fallbacks,calendar_units,model_output_source,model_transform_rule,active_flag,notes
+real_gdp_advance,gdp,GDP (QoQ),,% QoQ SAAR,,,True,Keep only ADVANCE release (earliest of 3 same-Q# releases per reference quarter).
+industrial_production,industrial_production,Industrial Production (MoM),,% MoM,,,True,
+durable_goods,durable_goods,Durable Goods Orders (MoM),,% MoM,,,True,
+ism_manufacturing,ism_manufacturing,ISM Manufacturing PMI,,index level,,,True,
+cpi,cpi,CPI (YoY),,% YoY,,,True,Headline YoY (using the YoY series rather than MoM SA).
+ppi,ppi,PPI (MoM),,% MoM,,,True,
+pce_price_index,personal_income_outlays,PCE price index (MoM),PCE Deflator (MoM),% MoM,,,True,Concatenate PCE Deflator (MoM) pre-2019-08 and PCE price index (MoM) post-2019-08 (same series renamed; prefer PCE price index on overlap).
+real_pce,personal_income_outlays,Real Personal Consumption (MoM),,% MoM,,,True,
+retail_sales,retail_sales,Retail Sales (MoM),,% MoM,,,True,
+nonfarm_payrolls,employment_situation,Nonfarm Payrolls,,K level change,,,True,
+unemployment_rate,employment_situation,Unemployment Rate,,% level,,,True,
+housing_starts,new_residential_construction,Housing Starts,,M SAAR level,,,True,
+building_permits,new_residential_construction,Building Permits,,M SAAR level,,,True,All releases with valid A+C+r kept; outline does not restrict to 08:30. From 2023 onward the revised release is a separate timestamp-group event.
+existing_home_sales,existing_home_sales,Existing Home Sales,,M SAAR level,,,True,
+new_home_sales,new_home_sales,New Home Sales,,K SAAR level,,,True,
+ism_services,ism_services,ISM Non-Manufacturing PMI,,index level,,,True,Investing.com uses the legacy 'Non-Manufacturing' label for ISM Services.

@@ -1,0 +1,25 @@
+# Core analysis
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+statsmodels>=0.14
+matplotlib>=3.7
+
+# LLM clients
+openai>=1.40
+anthropic>=0.40
+claude-agent-sdk>=0.1
+
+# Scrapers (release calendar, Polymarket)
+requests>=2.31
+cloudscraper>=1.2
+beautifulsoup4>=4.12
+tenacity>=8.2
+tqdm>=4.66
+
+# Timezone data (needed on some platforms for zoneinfo)
+tzdata
+python-dateutil>=2.8
+
+# Optional: only required by extract_event_windows.py, which writes parquet
+pyarrow>=14.0

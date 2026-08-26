@@ -1,0 +1,146 @@
+field_id,release_datetime_et,event,event_base_matched,actual,forecast,ref_period
+real_gdp_advance,2013-12-20 08:30:00,GDP (QoQ),GDP (QoQ),4.1,3.6,2013-11
+real_gdp_advance,2014-08-28 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),4.2,3.9,2014-Q2
+real_gdp_advance,2014-09-26 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),4.6,4.6,2014-Q2
+real_gdp_advance,2014-11-25 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.9,3.3,2014-Q3
+real_gdp_advance,2014-12-23 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),5.0,4.3,2014-Q3
+real_gdp_advance,2015-02-27 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.2,2.1,2014-Q4
+real_gdp_advance,2015-03-27 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.2,2.4,2014-Q4
+real_gdp_advance,2015-05-29 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-0.7,-0.8,2015-Q1
+real_gdp_advance,2015-06-24 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-0.2,-0.2,2015-Q1
+real_gdp_advance,2015-08-27 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.7,3.2,2015-Q2
+real_gdp_advance,2015-09-25 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.9,3.7,2015-Q2
+real_gdp_advance,2015-11-24 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.1,2.1,2015-Q3
+real_gdp_advance,2015-12-22 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.0,1.9,2015-Q3
+real_gdp_advance,2016-02-26 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),1.0,0.4,2015-Q4
+real_gdp_advance,2016-03-25 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),1.4,1.0,2015-Q4
+real_gdp_advance,2016-05-27 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),0.8,0.9,2016-Q1
+real_gdp_advance,2016-06-28 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),1.1,1.0,2016-Q1
+real_gdp_advance,2016-08-26 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),1.1,1.1,2016-Q2
+real_gdp_advance,2016-09-29 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),1.4,1.3,2016-Q2
+real_gdp_advance,2016-11-29 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.2,3.0,2016-Q3
+real_gdp_advance,2016-12-22 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.5,3.3,2016-Q3
+real_gdp_advance,2017-02-28 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),1.9,2.1,2016-Q4
+real_gdp_advance,2017-03-30 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.1,2.0,2016-Q4
+real_gdp_advance,2017-05-26 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),1.2,0.9,2017-Q1
+real_gdp_advance,2017-06-29 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),1.4,1.2,2017-Q1
+real_gdp_advance,2017-08-30 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.0,2.7,2017-Q2
+real_gdp_advance,2017-09-28 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.1,3.0,2017-Q2
+real_gdp_advance,2017-11-29 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.3,3.2,2017-Q3
+real_gdp_advance,2017-12-21 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.2,3.3,2017-Q3
+real_gdp_advance,2018-02-28 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.5,2.5,2017-Q4
+real_gdp_advance,2018-03-28 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.9,2.7,2017-Q4
+real_gdp_advance,2018-05-30 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),2.2,2.3,2018-Q1
+real_gdp_advance,2018-06-28 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),2.0,2.2,2018-Q1
+real_gdp_advance,2018-08-29 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),4.2,4.0,2018-Q2
+real_gdp_advance,2018-09-27 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),4.2,4.2,2018-Q2
+real_gdp_advance,2018-11-28 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.5,3.6,2018-Q3
+real_gdp_advance,2018-12-21 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.4,3.5,2018-Q3
+real_gdp_advance,2019-03-28 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.2,2.4,2018-Q4
+real_gdp_advance,2019-05-30 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),3.1,3.1,2019-Q1
+real_gdp_advance,2019-06-27 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),3.1,3.1,2019-Q1
+real_gdp_advance,2019-08-29 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),2.0,2.0,2019-Q2
+real_gdp_advance,2019-09-26 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),2.0,2.0,2019-Q2
+real_gdp_advance,2019-11-27 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.1,1.9,2019-Q3
+real_gdp_advance,2019-12-20 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.1,2.1,2019-Q3
+real_gdp_advance,2020-02-27 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.1,2.1,2019-Q4
+real_gdp_advance,2020-03-26 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.1,2.1,2019-Q4
+real_gdp_advance,2020-05-28 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-5.0,-4.8,2020-Q1
+real_gdp_advance,2020-06-25 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-5.0,-5.0,2020-Q1
+real_gdp_advance,2020-08-27 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),-31.7,-32.5,2020-Q2
+real_gdp_advance,2020-09-30 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),-31.4,-31.7,2020-Q2
+real_gdp_advance,2020-11-25 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),33.1,33.2,2020-Q3
+real_gdp_advance,2020-12-22 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),33.4,33.1,2020-Q3
+real_gdp_advance,2021-02-25 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),4.1,4.2,2020-Q4
+real_gdp_advance,2021-03-25 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),4.3,4.1,2020-Q4
+real_gdp_advance,2021-05-27 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),6.4,6.5,2021-Q1
+real_gdp_advance,2021-06-24 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),6.4,6.4,2021-Q1
+real_gdp_advance,2021-08-26 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),6.6,6.7,2021-Q2
+real_gdp_advance,2021-09-30 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),6.7,6.6,2021-Q2
+real_gdp_advance,2021-11-24 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.1,2.2,2021-Q3
+real_gdp_advance,2021-12-22 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.3,2.1,2021-Q3
+real_gdp_advance,2022-02-24 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),7.0,7.0,2021-Q4
+real_gdp_advance,2022-03-30 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),6.9,7.1,2021-Q4
+real_gdp_advance,2022-05-26 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-1.5,-1.3,2022-Q1
+real_gdp_advance,2022-06-29 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-1.6,-1.5,2022-Q1
+real_gdp_advance,2022-08-25 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),-0.6,-0.8,2022-Q2
+real_gdp_advance,2022-09-29 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),-0.6,-0.6,2022-Q2
+real_gdp_advance,2022-11-30 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.9,2.7,2022-Q3
+real_gdp_advance,2022-12-22 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.2,2.9,2022-Q3
+real_gdp_advance,2023-02-23 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.7,2.9,2022-Q4
+real_gdp_advance,2023-03-30 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.6,2.7,2022-Q4
+real_gdp_advance,2023-05-25 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),1.3,1.1,2023-Q1
+real_gdp_advance,2023-06-29 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),2.0,1.4,2023-Q1
+real_gdp_advance,2023-08-30 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),2.1,2.4,2023-Q2
+real_gdp_advance,2023-09-28 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),2.1,2.1,2023-Q2
+real_gdp_advance,2023-11-29 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),5.2,4.9,2023-Q3
+real_gdp_advance,2023-12-21 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),4.9,5.2,2023-Q3
+real_gdp_advance,2024-02-28 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),3.2,3.3,2023-Q4
+real_gdp_advance,2024-03-28 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),3.4,3.2,2023-Q4
+real_gdp_advance,2024-05-30 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),1.3,1.6,2024-Q1
+real_gdp_advance,2024-06-27 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),1.4,1.3,2024-Q1
+real_gdp_advance,2024-08-29 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.0,2.8,2024-Q2
+real_gdp_advance,2024-09-26 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.0,3.0,2024-Q2
+real_gdp_advance,2024-11-27 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),2.8,2.8,2024-Q3
+real_gdp_advance,2024-12-19 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),3.1,2.8,2024-Q3
+real_gdp_advance,2025-02-27 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.3,2.3,2024-Q4
+real_gdp_advance,2025-03-27 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),2.4,2.3,2024-Q4
+real_gdp_advance,2025-05-29 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-0.2,-0.3,2025-Q1
+real_gdp_advance,2025-06-26 08:30:00,GDP (QoQ)  (Q1),GDP (QoQ),-0.5,-0.2,2025-Q1
+real_gdp_advance,2025-08-28 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.3,3.0,2025-Q2
+real_gdp_advance,2025-09-25 08:30:00,GDP (QoQ)  (Q2),GDP (QoQ),3.8,3.3,2025-Q2
+real_gdp_advance,2026-01-22 08:30:00,GDP (QoQ)  (Q3),GDP (QoQ),4.4,4.3,2025-Q3
+real_gdp_advance,2026-03-13 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),0.7,1.4,2025-Q4
+real_gdp_advance,2026-04-09 08:30:00,GDP (QoQ)  (Q4),GDP (QoQ),0.5,0.7,2025-Q4
+durable_goods,2018-04-04 10:00:00,Durable Goods Orders (MoM),Durable Goods Orders (MoM),3.0,3.1,2018-02
+durable_goods,2018-05-03 10:00:00,Durable Goods Orders (MoM),Durable Goods Orders (MoM),2.6,,2018-03
+durable_goods,2018-06-04 10:00:00,Durable Goods Orders (MoM),Durable Goods Orders (MoM),-1.6,-1.6,2018-04
+durable_goods,2018-07-03 10:00:00,Durable Goods Orders (MoM),Durable Goods Orders (MoM),-0.4,-0.5,2018-05
+durable_goods,2018-09-06 10:00:00,Durable Goods Orders (MoM),Durable Goods Orders (MoM),-1.7,-1.7,2018-07
+durable_goods,2019-09-05 10:00:00,Durable Goods Orders (MoM),Durable Goods Orders (MoM),2.0,,2019-07
+durable_goods,2020-11-25 07:30:00,Durable Goods Orders (MoM)  (Sep),Durable Goods Orders (MoM),1.3,0.9,2020-09
+pce_price_index,2019-03-29 08:30:00,PCE Deflator (MoM),PCE Deflator (MoM),-0.1,0.0,2019-02
+real_pce,2013-12-23 08:30:00,Real Personal Consumption (MoM),Real Personal Consumption (MoM),0.5,,2013-11
+real_pce,2014-03-28 08:30:00,Real Personal Consumption (MoM),Real Personal Consumption (MoM),0.2,0.1,2014-02
+real_pce,2014-05-30 08:30:00,Real Personal Consumption (MoM),Real Personal Consumption (MoM),-0.3,,2014-04
+real_pce,2014-08-29 08:30:00,Real Personal Consumption (MoM),Real Personal Consumption (MoM),-0.2,,2014-07
+building_permits,2022-03-23 09:30:00,Building Permits  (Feb),Building Permits,1351000.0,,2022-02
+building_permits,2022-11-23 08:00:00,Building Permits  (Oct),Building Permits,1512000.0,1526000.0,2022-10
+building_permits,2022-12-23 08:30:00,Building Permits  (Nov),Building Permits,1351000.0,,2022-11
+building_permits,2023-01-26 08:00:00,Building Permits  (Dec),Building Permits,1337000.0,,2022-12
+building_permits,2023-02-24 07:30:00,Building Permits  (Jan),Building Permits,1339000.0,,2023-01
+building_permits,2023-03-23 08:30:00,Building Permits  (Feb),Building Permits,1550000.0,1524000.0,2023-02
+building_permits,2023-04-25 08:10:00,Building Permits  (Mar),Building Permits,1430000.0,1413000.0,2023-03
+building_permits,2023-05-23 08:00:00,Building Permits  (Apr),Building Permits,1417000.0,1416000.0,2023-04
+building_permits,2023-06-27 07:45:00,Building Permits  (May),Building Permits,1496000.0,1491000.0,2023-05
+building_permits,2023-07-26 08:00:00,Building Permits  (Jun),Building Permits,1441000.0,1440000.0,2023-06
+building_permits,2023-08-23 08:00:00,Building Permits  (Jul),Building Permits,1443000.0,1442000.0,2023-07
+building_permits,2023-09-26 08:00:00,Building Permits  (Aug),Building Permits,1541000.0,1543000.0,2023-08
+building_permits,2023-10-25 07:40:00,Building Permits  (Sep),Building Permits,1471000.0,1473000.0,2023-09
+building_permits,2023-11-27 07:50:00,Building Permits  (Oct),Building Permits,1498000.0,1487000.0,2023-10
+building_permits,2023-12-22 07:30:00,Building Permits  (Nov),Building Permits,1467000.0,1460000.0,2023-11
+building_permits,2024-01-25 07:40:00,Building Permits,Building Permits,1493000.0,1495000.0,2023-12
+building_permits,2024-02-26 08:30:00,Building Permits,Building Permits,1489000.0,1470000.0,2024-01
+building_permits,2024-03-25 07:20:00,Building Permits,Building Permits,1524000.0,1518000.0,2024-02
+building_permits,2024-04-23 07:30:00,Building Permits,Building Permits,1467000.0,1458000.0,2024-03
+building_permits,2024-05-23 08:25:00,Building Permits,Building Permits,1440000.0,1440000.0,2024-04
+building_permits,2024-06-26 08:00:00,Building Permits,Building Permits,1399000.0,1386000.0,2024-05
+building_permits,2024-07-24 08:30:00,Building Permits,Building Permits,1454000.0,1446000.0,2024-06
+building_permits,2024-08-23 07:30:00,Building Permits  (Jul),Building Permits,1406000.0,1396000.0,2024-07
+building_permits,2024-09-25 07:30:00,Building Permits  (Aug),Building Permits,1470000.0,1475000.0,2024-08
+building_permits,2024-10-24 07:30:00,Building Permits  (Sep),Building Permits,1425000.0,1428000.0,2024-09
+building_permits,2024-11-26 08:00:00,Building Permits  (Oct),Building Permits,1419000.0,1416000.0,2024-10
+building_permits,2024-12-23 09:30:00,Building Permits  (Nov),Building Permits,1493000.0,1505000.0,2024-11
+building_permits,2025-01-27 07:30:00,Building Permits  (Dec),Building Permits,1482000.0,1483000.0,2024-12
+building_permits,2025-02-26 08:00:00,Building Permits  (Jan),Building Permits,1473000.0,1483000.0,2025-01
+building_permits,2025-03-25 07:40:00,Building Permits  (Feb),Building Permits,1459000.0,1456000.0,2025-02
+building_permits,2025-04-23 07:30:00,Building Permits  (Mar),Building Permits,1467000.0,1482000.0,2025-03
+building_permits,2025-05-23 08:10:00,Building Permits  (Apr),Building Permits,1422000.0,1412000.0,2025-04
+building_permits,2025-06-25 08:30:00,Building Permits  (May),Building Permits,1394000.0,1393000.0,2025-05
+building_permits,2025-07-24 08:00:00,Building Permits  (Jun),Building Permits,1393000.0,1397000.0,2025-06
+building_permits,2025-08-25 08:00:00,Building Permits  (Jul),Building Permits,1362000.0,1354000.0,2025-07
+building_permits,2025-09-24 07:50:00,Building Permits  (Aug),Building Permits,1330000.0,1312000.0,2025-08
+building_permits,2026-02-20 07:59:00,Building Permits  (Nov),Building Permits,1388000.0,1388000.0,2025-11
+building_permits,2026-02-20 08:00:00,Building Permits  (Dec),Building Permits,1455000.0,1448000.0,2025-12
+building_permits,2026-03-19 08:00:00,Building Permits  (Jan),Building Permits,1386000.0,1376000.0,2026-01
+new_home_sales,2013-12-24 10:00:00,New Home Sales,New Home Sales,464000.0,445000.0,2013-11

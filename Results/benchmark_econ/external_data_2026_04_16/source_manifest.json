@@ -1,0 +1,101 @@
+[
+  {
+    "variable_group":"real_dpi",
+    "status":"fetched_exact_fallback_fred",
+    "source_type":"fred_direct_csv",
+    "source_url":"https:\/\/fred.stlouisfed.org\/graph\/fredgraph.csv?id=DSPIC96&cosd=1959-01-01",
+    "local_file":"processed\/real_dpi_fred_exact.csv",
+    "rows":806.0,
+    "note":"Exact FRED series for DSPIC96. Official BEA API exists but requires a registered API key."
+  },
+  {
+    "variable_group":"real_pce",
+    "status":"fetched_exact_fallback_fred",
+    "source_type":"fred_direct_csv",
+    "source_url":"https:\/\/fred.stlouisfed.org\/graph\/fredgraph.csv?id=PCEC96&cosd=1959-01-01",
+    "local_file":"processed\/real_pce_fred_exact.csv",
+    "rows":230.0,
+    "note":"Exact FRED series for PCEC96. Official BEA API exists but requires a registered API key."
+  },
+  {
+    "variable_group":"new_home_sales",
+    "status":"fetched_exact_official",
+    "source_type":"official_census_workbook",
+    "source_url":"https:\/\/www.census.gov\/construction\/nrs\/xls\/sold_cust.xlsx",
+    "local_file":"processed\/new_home_sales_census_monthly_saar.csv",
+    "rows":757.0,
+    "note":"Parsed from the Monthly sheet, United States seasonally adjusted annual rate column."
+  },
+  {
+    "variable_group":"existing_home_sales",
+    "status":"fetched_official_latest_only",
+    "source_type":"official_nar_pdf",
+    "source_url":"https:\/\/www.nar.realtor\/sites\/default\/files\/2026-04\/ehs-03-2026-summary-2026-04-13.pdf",
+    "local_file":"raw\/nar_existing_home_sales_summary_2026_03.pdf",
+    "rows":null,
+    "note":"Official latest monthly summary PDF from NAR; does not provide a machine-readable long history by itself."
+  },
+  {
+    "variable_group":"existing_home_sales",
+    "status":"fetched_official_latest_only",
+    "source_type":"official_nar_pdf",
+    "source_url":"https:\/\/www.nar.realtor\/sites\/default\/files\/2026-04\/ehs-03-2026-supplemental-data-2026-04-13.pdf",
+    "local_file":"raw\/nar_existing_home_sales_supplemental_2026_03.pdf",
+    "rows":null,
+    "note":"Official latest supplemental PDF from NAR; useful for current detail but not a direct long-history CSV\/API."
+  },
+  {
+    "variable_group":"existing_home_sales",
+    "status":"fetched_partial_fallback",
+    "source_type":"ycharts_html_table",
+    "source_url":"https:\/\/ycharts.com\/indicators\/us_existing_home_sales",
+    "local_file":"processed\/existing_home_sales_ycharts_partial.csv",
+    "rows":50.0,
+    "note":"Directly accessible fallback history from YCharts. Only 50 monthly observations are exposed publicly in HTML, so this alone does not clear a 60-observation benchmark threshold."
+  },
+  {
+    "variable_group":"ism_manufacturing",
+    "status":"fetched_combined_official_plus_fallback",
+    "source_type":"official_ism_archive_plus_ycharts",
+    "source_url":"https:\/\/www.ismworld.org\/sitemap.xml | https:\/\/ycharts.com\/indicators\/us_pmi",
+    "local_file":"processed\/ism_manufacturing_combined_2021_04_to_2026_03.csv",
+    "rows":60.0,
+    "note":"Ten older observations were manually verified from official ISM archive pages; fifty newer observations were parsed from the directly accessible YCharts historical tables."
+  },
+  {
+    "variable_group":"ism_services",
+    "status":"fetched_combined_official_plus_fallback",
+    "source_type":"official_ism_archive_plus_ycharts",
+    "source_url":"https:\/\/www.ismworld.org\/sitemap.xml | https:\/\/ycharts.com\/indicators\/us_ism_non_manufacturing_index",
+    "local_file":"processed\/ism_services_combined_2021_04_to_2026_03.csv",
+    "rows":60.0,
+    "note":"Ten older observations were manually verified from official ISM archive pages; fifty newer observations were parsed from the directly accessible YCharts historical tables."
+  },
+  {
+    "variable_group":"existing_home_sales",
+    "status":"parsed_long_history_fallback",
+    "source_type":"investing_manual_expanded_html",
+    "source_url":"https:\/\/www.investing.com\/economic-calendar\/existing-home-sales-99",
+    "local_file":"processed\/existing_home_sales_investing_calendar_history.csv",
+    "rows":100.0,
+    "note":"Parsed from the embedded __NEXT_DATA__ occurrences list after manually expanding the Investing.com historical table. One row was missing reference_period in the payload and was inferred as release month minus one month after checking surrounding rows. Parsed range: 2017-12-01 to 2026-03-01."
+  },
+  {
+    "variable_group":"ism_manufacturing",
+    "status":"parsed_long_history_fallback",
+    "source_type":"investing_manual_expanded_html",
+    "source_url":"https:\/\/www.investing.com\/economic-calendar\/ism-manufacturing-pmi-173",
+    "local_file":"processed\/ism_manufacturing_investing_calendar_history.csv",
+    "rows":99.0,
+    "note":"Parsed from the embedded __NEXT_DATA__ occurrences list after manually expanding the Investing.com historical table. Parsed range: 2018-01-01 to 2026-03-01."
+  },
+  {
+    "variable_group":"ism_services",
+    "status":"parsed_long_history_fallback",
+    "source_type":"investing_manual_expanded_html",
+    "source_url":"https:\/\/www.investing.com\/economic-calendar\/ism-non-manufacturing-pmi-176",
+    "local_file":"processed\/ism_services_investing_calendar_history.csv",
+    "rows":99.0,
+    "note":"Parsed from the embedded __NEXT_DATA__ occurrences list after manually expanding the Investing.com historical table. Parsed range: 2018-01-01 to 2026-03-01."
+  }
+]

@@ -1,0 +1,17 @@
+theme,field_id,status
+Production,real_gdp_advance,active
+Production,industrial_production,active
+Production,durable_goods,active
+Production,ism_manufacturing,active
+Inflation_Consumption_Services,cpi,active
+Inflation_Consumption_Services,ppi,active
+Inflation_Consumption_Services,pce_price_index,active
+Inflation_Consumption_Services,retail_sales,active
+Inflation_Consumption_Services,real_pce,active
+Inflation_Consumption_Services,ism_services,active
+Labor_Market,nonfarm_payrolls,active
+Labor_Market,unemployment_rate,active
+Housing,housing_starts,active
+Housing,building_permits,active
+Housing,existing_home_sales,active
+Housing,new_home_sales,active
