@@ -1,0 +1,28 @@
+# docs/ is the published website. Nothing that carries row-level data may live
+# here -- the repo is public and several pipeline inputs are not redistributable
+# (see ../DATA_SOURCES.md). Belt and braces on top of check_release_safety.py.
+
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.xlsx
+*.xls
+*.pkl
+*.pickle
+*.feather
+*.h5
+*.hdf5
+*.db
+*.sqlite
+
+# The paper PDF is deliberately not hosted here.
+*.pdf
+
+# Local preview / tooling noise
+__pycache__/
+.DS_Store
+
+# The one JSON the site publishes is force-added; block strays.
+data/*.json
+!data/leaderboard.json

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveMacroEval — A Live Benchmark for LLM Macroeconomic Nowcasting</title>
+<meta name="description" content="LiveMacroEval is a live, contamination-resistant benchmark in which LLM agents produce hourly nowcasts for sixteen major U.S. macroeconomic indicators, scored against equity-market reactions and prediction-market returns.">
+<meta property="og:title" content="LiveMacroEval">
+<meta property="og:description" content="Can LLMs take the pulse of the economy? A live benchmark for LLM macroeconomic nowcasting.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Live<span>Macro</span>Eval</div>
+    <div class="navlinks">
+      <a href="#task">Task</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#results">Results</a>
+      <a href="#cite">Cite</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Live benchmark · updated biweekly</span>
+    <h1 class="title">Can LLMs Take the Pulse of the Economy?</h1>
+    <p class="subtitle">A real-time evaluation of LLM nowcasts on sixteen U.S. headline macroeconomic
+      indicators, scored against the equity market and prediction markets — and against the
+      professional economists who do this for a living.</p>
+
+    <p class="authors">
+      <b>Xinyue Zhao</b><sup>1</sup>*, <b>Ruiyi Zhang</b><sup>2</sup>*, <b>Liqin Ye</b><sup>1</sup>,
+      <b>Rui Cao</b><sup>1</sup>, <b>Pengtao Xie</b><sup>2</sup>, <b>Sudheer Chava</b><sup>1</sup>†
+    </p>
+    <p class="affil"><sup>1</sup>Georgia Institute of Technology &nbsp;·&nbsp;
+      <sup>2</sup>University of California San Diego &nbsp;&nbsp;
+      <span style="opacity:.7">* equal contribution &nbsp; † corresponding author</span></p>
+
+    <div class="btnrow">
+      <a class="btn primary disabled" href="#">Paper (arXiv)</a>
+      <a class="btn" href="https://github.com/XinyueZhao777/LiveMacroEval">Code</a>
+      <a class="btn" href="https://github.com/XinyueZhao777/LiveMacroEval/blob/main/DATA_SOURCES.md">Data</a>
+      <a class="btn" href="#leaderboard">Leaderboard</a>
+    </div>
+
+    <div class="livestrip">
+      <span><span class="dot"></span> &nbsp;Live</span>
+      <span>Last updated <b id="last-updated">—</b></span>
+      <span>Next refresh <b id="next-update">—</b></span>
+      <span>Cadence <b>every 2 weeks</b></span>
+    </div>
+  </div>
+</header>
+
+<section id="why">
+  <div class="wrap">
+    <h2><span class="num">01</span>Why a live benchmark</h2>
+    <p class="lede">Nowcasting — estimating an indicator's value for the current reference period
+      <em>before</em> its official release — is a core task in empirical macroeconomics, and central
+      banks devote dedicated teams of expert economists to it. LLM agents look like natural
+      candidates: they combine broad world knowledge with real-time web search, and they can be
+      queried far more often than any institutional nowcast updates.</p>
+
+    <div class="callout">
+      <b>The contamination problem.</b> GDP and CPI are among the most widely reported numbers on
+      earth. Their historical values are almost certainly memorized during pretraining, so any
+      evaluation on historical releases measures recall, not nowcasting. The only clean test is a
+      strictly live one, where the target has not yet been released at prediction time.
+    </div>
+
+    <p>LiveMacroEval runs that test. Every nowcast in the benchmark is produced inside a pre-release
+      window that closes at the scheduled official release, so the target value cannot have entered
+      the model's training corpus or its retrieved web content. The benchmark is
+      <strong>contamination-free by construction</strong> — and it keeps running, which is why the
+      numbers on this page move.</p>
+  </div>
+</section>
+
+<section id="task">
+  <div class="wrap">
+    <h2><span class="num">02</span>The task</h2>
+    <p class="lede">For each of <b id="ind-count">16</b> U.S. headline indicators, an LLM agent with web
+      search produces an <b>hourly nowcast</b> over a window that opens in the final week of the
+      reference month and closes at the official release — a span of weeks to months. The agent
+      decides for itself when and what to search.</p>
+
+    <div class="grid g4" id="ind-grid"></div>
+
+    <h3>Who we compare against</h3>
+    <div class="grid g2">
+      <div class="card">
+        <span class="tag">Human experts</span>
+        <h4>Federal Reserve regional banks</h4>
+        <p class="blurb">Institutional nowcasts on the three indicators where they exist.</p>
+        <ul id="fed-list"></ul>
+      </div>
+      <div class="card">
+        <span class="tag">Human experts + econometrics</span>
+        <h4>Bloomberg ECOS &amp; auto-ARIMA</h4>
+        <p class="blurb">The professional consensus, plus a standard time-series baseline.</p>
+        <ul>
+          <li><b>Bloomberg ECOS</b> — cross-sectional median of a panel of professional economists,
+              covering all sixteen indicators. The canonical benchmark for real-time macro
+              expectations, and well known to be extraordinarily hard to beat.</li>
+          <li><b>auto-ARIMA</b> — univariate, refit at the start of each window.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="metrics">
+  <div class="wrap">
+    <h2><span class="num">03</span>How we score</h2>
+    <p class="lede">Plain MSE on the released level ignores that indicators differ wildly in economic
+      importance, conflates prediction quality with each indicator's scale, and throws away the
+      pre-release trajectory. We use two market-grounded metrics instead.</p>
+
+    <div class="grid g2">
+      <div class="card">
+        <span class="tag">Metric 1</span>
+        <h4>LiveMacro Score</h4>
+        <p class="blurb">Does the nowcast explain how the equity market actually moved?</p>
+        <p style="font-size:14.5px;color:var(--fg-muted)">Macro <em>surprises</em> — the gap between the
+          released value and the prevailing consensus — causally move equity prices. We estimate each
+          indicator's effect <em>β<sub>i</sub></em> on E-mini S&amp;P 500 futures over a tight
+          [−5, +30] minute window around the release, on a long historical sample, frozen before any
+          live outcome is scored. Each model's nowcast implies a surprise, hence an implied return.</p>
+        <div class="formula">LiveMacro = (SS<sub>cons</sub> − SS<sub>model</sub>) / (SS<sub>cons</sub> + SS<sub>model</sub>)</div>
+        <p style="font-size:14px;color:var(--fg-faint);margin:0">A bounded out-of-sample R². <b>+1</b> =
+          perfectly anticipates announcement-window returns. <b>0</b> = ties the Bloomberg consensus.
+          <b>−1</b> = arbitrarily worse. Because β weights each indicator by its measured market impact,
+          sixteen accuracies collapse into one comparable number.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Metric 2</span>
+        <h4>LiveBetting Score</h4>
+        <p class="blurb">If you traded the nowcast, would you make money?</p>
+        <p style="font-size:14.5px;color:var(--fg-muted)">Each Polymarket-style macro market is a set of
+          mutually exclusive numeric buckets trading as binary contracts. At every hour strictly before
+          the release we place a $1 bet on the bucket containing the agent's most recent nowcast, buying
+          1/<em>p</em> shares at the prevailing market price <em>p</em>.</p>
+        <p style="font-size:14px;color:var(--fg-faint);margin:0">Because <em>p</em> is the crowd's
+          implied probability, liquidity is priced into the return by construction: when the crowd is
+          already right, winning pays little; when the crowd is wrong and the agent is right, it pays a
+          lot. The metric rewards <b>beating the crowd</b>, and it is unit-free, so it aggregates
+          directly across heterogeneous indicators. A single GPT-5 GDP window can contain over 1,400
+          hourly bets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leaderboard">
+  <div class="wrap">
+    <h2><span class="num">04</span>Leaderboard</h2>
+    <p class="lede" id="lb-window">—</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th style="width:44px">#</th><th>Model</th>
+          <th class="num">LiveMacro</th><th class="num">90% CI</th><th class="num">Events</th>
+          <th class="barcell">vs. consensus</th>
+        </tr></thead>
+        <tbody id="lb-body"><tr><td colspan="6">Loading…</td></tr></tbody>
+      </table>
+    </div>
+    <p style="font-size:13.5px;color:var(--fg-faint);margin-top:12px" id="lb-note">—</p>
+
+    <h3>Tool and agent design</h3>
+    <p style="font-size:14.5px;color:var(--fg-muted);margin-bottom:14px" id="ad-window">—</p>
+    <div class="tablewrap" style="max-width:520px">
+      <table style="min-width:0">
+        <thead><tr><th>Configuration</th><th class="num">LiveMacro</th></tr></thead>
+        <tbody id="ad-body"></tbody>
+      </table>
+    </div>
+    <p style="font-size:13.5px;color:var(--fg-faint);margin-top:12px" id="ad-note">—</p>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <h2><span class="num">05</span>Results</h2>
+    <p class="lede">Over six months of live evaluation, the top LLM agent ties the professional
+      consensus in aggregate — but the aggregate hides sharp heterogeneity across the economy.</p>
+
+    <figure>
+      <img src="assets/figures/bdrc_score_no_agent_ci90.png" alt="LiveMacro Score by model, with 90% confidence intervals">
+      <figcaption><b>LiveMacro Score by model.</b> GPT-5 leads the panel and is statistically
+        indistinguishable from the Bloomberg consensus — a tie. The remaining agents sit modestly
+        below the consensus but above the auto-ARIMA baseline. Error bars are 90% parametric-bootstrap
+        confidence intervals.</figcaption>
+    </figure>
+
+    <h3>Where the skill is: by theme</h3>
+    <p>Decomposing the score by theme shows LLM agents <em>exceed</em> the consensus on Supply and
+      Production and on Housing — plausibly because those themes rest on higher-frequency underlying
+      components (mortgage applications, housing sentiment) that reward intra-window updating. They
+      <em>underperform</em> on Demand and Inflation, consistent with the anchored-expectations regime
+      that protects the consensus on headline inflation. Labor Market clusters near zero for every
+      model, consistent with a signal-to-noise ceiling on the household survey.</p>
+
+    <div class="figgrid">
+      <figure><img src="assets/figures/theme_production.png" alt="LiveMacro Score, Supply and Production theme"><figcaption><b>Supply and Production</b></figcaption></figure>
+      <figure><img src="assets/figures/theme_inflation_consumption_services.png" alt="LiveMacro Score, Demand and Inflation theme"><figcaption><b>Demand and Inflation</b></figcaption></figure>
+      <figure><img src="assets/figures/theme_labor_market.png" alt="LiveMacro Score, Labor Market theme"><figcaption><b>Labor Market</b></figcaption></figure>
+      <figure><img src="assets/figures/theme_housing.png" alt="LiveMacro Score, Housing theme"><figcaption><b>Housing</b></figcaption></figure>
+    </div>
+
+    <h3>LiveBetting: trading against the Fed</h3>
+    <p>On real GDP, four LLM agents finish the window with positive cumulative returns and three beat
+      the Atlanta Fed, with only the New York Fed ahead. On the unemployment rate the leading agent
+      finishes above the Chicago Fed. On CPI, however, the Cleveland Fed and the Bloomberg consensus
+      still lead every LLM agent — a real limitation on indicators where institutional models are
+      tightly tuned to known economic structure.</p>
+
+    <figure><img src="assets/figures/continuous_returns_real_gdp_qoq_mar-anchor-claude-sonnet-4.5.png" alt="Cumulative LiveBetting returns, real GDP"><figcaption><b>Real GDP</b> — cumulative LiveBetting return.</figcaption></figure>
+    <figure><img src="assets/figures/continuous_returns_cpi_yoy_mar-anchor-claude-sonnet-4.5.png" alt="Cumulative LiveBetting returns, CPI"><figcaption><b>CPI</b> — cumulative LiveBetting return.</figcaption></figure>
+    <figure><img src="assets/figures/continuous_returns_unemployment_rate_mar-anchor-claude-sonnet-4.5.png" alt="Cumulative LiveBetting returns, unemployment rate"><figcaption><b>Unemployment rate</b> — cumulative LiveBetting return.</figcaption></figure>
+
+    <h3>Case study: watching a belief update</h3>
+    <p>Hourly cadence makes it possible to trace, after the fact, how a single information event
+      enters the agent's information set. GPT-5's March 2026 CPI nowcast sits around 2.7% through
+      early April, then jumps to about 3% inside a tight intraday window on April 8 — a window
+      containing both the EIA Petroleum Status Report (a large gasoline-inventory drawdown) and FOMC
+      minutes flagging upside inflation risk. Both push the same direction, and the revision's
+      magnitude is consistent with a back-of-the-envelope gasoline contribution under BLS expenditure
+      weights.</p>
+
+    <figure><img src="assets/figures/case_study_cpi_yoy_2026_03.png" alt="GPT-5 nowcasts for March 2026 CPI"><figcaption><b>March 2026 CPI.</b> Dashed line marks 10:30 ET, April 8, 2026.</figcaption></figure>
+    <figure><img src="assets/figures/case_study_pce_mom_2026_03.png" alt="GPT-5 nowcasts for March 2026 PCE price index"><figcaption><b>March 2026 PCE price index</b> — an analogous upward shift in the same window.</figcaption></figure>
+  </div>
+</section>
+
+<section id="cite">
+  <div class="wrap">
+    <h2><span class="num">06</span>Citation</h2>
+    <pre>@inproceedings{zhao2026livemacroeval,
+  title     = {Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation
+               of LLM Nowcasts on Macroeconomic Indicators},
+  author    = {Zhao, Xinyue and Zhang, Ruiyi and Ye, Liqin and
+               Cao, Rui and Xie, Pengtao and Chava, Sudheer},
+  booktitle = {Proceedings of EMNLP},
+  year      = {2026}
+}</pre>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    LiveMacroEval · Georgia Institute of Technology &amp; University of California San Diego ·
+    Leaderboard refreshed every two weeks ·
+    <a href="https://github.com/XinyueZhao777/LiveMacroEval">GitHub</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
