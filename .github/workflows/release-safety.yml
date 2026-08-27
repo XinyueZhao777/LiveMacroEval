@@ -1,0 +1,40 @@
+name: release-safety
+
+# docs/ is published to GitHub Pages from a public repo, while several pipeline
+# inputs are not redistributable (see DATA_SOURCES.md). This gate runs on every
+# push and pull request, so it holds even for commits made without the local
+# pre-commit hook installed.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Audit docs/ for anything beyond the final figures and tables
+        run: python tools/check_release_safety.py
+
+      - name: Verify the audit still blocks known leak attempts
+        run: python tools/test_release_safety.py
+
+      - name: Confirm no withheld data path exists anywhere in history
+        run: |
+          git log --all --name-only --format="" > /tmp/paths.txt
+          fail=0
+          for pat in bloomberg_overlay bloomberg_consensus investing_us_calendar \
+                     'data_sp500futures.*parquet' results_targets_ huber_final; do
+            if grep -Eq "$pat" /tmp/paths.txt; then
+              echo "::error::withheld path '$pat' appears in git history"
+              fail=1
+            fi
+          done
+          exit $fail

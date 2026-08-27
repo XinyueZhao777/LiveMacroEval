@@ -1,0 +1,13 @@
+#!/bin/sh
+# Refuse any commit that touches docs/ until the release-safety check passes.
+# Install once:  ln -sf ../../tools/hooks/pre-commit .git/hooks/pre-commit
+
+if git diff --cached --name-only | grep -q '^docs/'; then
+    echo "docs/ changed — running release-safety check..."
+    python3 tools/check_release_safety.py || {
+        echo
+        echo "Commit blocked. docs/ may publish only the final figures and tables."
+        echo "Override only if you are certain:  git commit --no-verify"
+        exit 1
+    }
+fi

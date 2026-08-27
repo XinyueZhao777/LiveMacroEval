@@ -33,5 +33,6 @@ and drop the `disabled` class once the preprint is up.
 
 ## Ongoing updates
 
-See `README.md`. The refresh is `python docs/update_site.py`, then
-`python docs/check_release_safety.py`, then commit and push.
+See `README.md`. The refresh is `python tools/update_site.py`, which runs the
+release-safety audit itself; then commit and push.
+`python tools/check_release_safety.py`, then commit and push.

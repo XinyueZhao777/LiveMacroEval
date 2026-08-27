@@ -24,8 +24,8 @@ LIVEMACRO_RESULTS). Run check_release_safety.py before every push.
 Usage
 -----
     . /home/ruiyi/anaconda3/bin/activate && conda activate livemacro
-    python docs/update_site.py --dry-run
-    python docs/update_site.py --overlay investing_overlay_0906 \
+    python tools/update_site.py --dry-run
+    python tools/update_site.py --overlay investing_overlay_0906 \
         --window "Investing.com consensus proxy - target periods Apr-Aug 2026"
 """
 from __future__ import annotations
@@ -36,11 +36,13 @@ import datetime as dt
 import json
 import os
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
-SITE = Path(__file__).resolve().parent          # <repo>/docs
-REPO = SITE.parent                              # <repo>  (public)
+TOOLS = Path(__file__).resolve().parent         # <repo>/tools
+REPO = TOOLS.parent                             # <repo>  (public)
+SITE = REPO / "docs"                            # the published site
 
 # The private working tree that holds the pipeline outputs and paper figures.
 DEFAULT_RESULTS = Path(os.environ.get("LIVEMACRO_RESULTS", "/home/ruiyi/livemacro/Results"))
@@ -87,7 +89,7 @@ def read_scores(csv_path: Path) -> list[dict]:
             f"scoring CSV not found:\n  {csv_path}\n\n"
             "This file is intentionally NOT in the public repo (see DATA_SOURCES.md).\n"
             "Point --results-root at your private Results/ checkout, e.g.\n"
-            "  python docs/update_site.py --results-root /home/ruiyi/livemacro/Results"
+            "  python tools/update_site.py --results-root /home/ruiyi/livemacro/Results"
         )
 
     rows = []
@@ -177,8 +179,14 @@ def main() -> None:
                 print(f"  ! missing figure, left as-is: {name}")
         print("refreshed docs/assets/figures/")
 
-    print("\nnext:\n  python docs/check_release_safety.py"
-          f"\n  git add docs && git commit -m 'site: refresh {data['last_updated']}' && git push")
+    print("\nrunning the release-safety check...")
+    sys.stdout.flush()
+    rc = subprocess.call([sys.executable, str(TOOLS / "check_release_safety.py")])
+    if rc != 0:
+        sys.exit("\nrefresh written, but docs/ is NOT safe to publish. Fix the above "
+                 "before committing.")
+    print(f"\nnext:\n  git add docs && git commit -m 'site: refresh "
+          f"{data['last_updated']}' && git push")
 
 
 if __name__ == "__main__":
