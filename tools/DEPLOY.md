@@ -3,14 +3,14 @@
 The site lives in `docs/` on `main`. One-time setup:
 
 ```bash
-gh api -X POST repos/XinyueZhao777/LiveMacroEval/pages \
+gh api -X POST repos/LiveMacroEval/LiveMacroEval.github.io/pages \
   -f 'source[branch]=main' -f 'source[path]=/docs'
 ```
 
 Or in the UI: **Settings → Pages → Source: Deploy from a branch →
 `main` / `/docs` → Save**.
 
-Live at **https://xinyuezhao777.github.io/LiveMacroEval/** about a minute later.
+Live at **https://livemacroeval.github.io/** about a minute later.
 `.nojekyll` must stay present, otherwise Jekyll ignores any path starting with an
 underscore. Every path in the site is relative, so it works unchanged from a repo
 subpath or from a bare domain.
@@ -21,7 +21,7 @@ subpath or from a bare domain.
 echo "livemacroeval.org" > docs/CNAME && git add docs/CNAME && git commit -m "custom domain" && git push
 ```
 
-Then point DNS at GitHub — a `CNAME` record for `www` → `xinyuezhao777.github.io`,
+Then point DNS at GitHub — a `CNAME` record for `www` → `livemacroeval.github.io`,
 or four `A` records at the apex IPs `185.199.108-111.153` — set the domain under
 Settings → Pages, and tick **Enforce HTTPS**.
 

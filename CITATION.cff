@@ -9,8 +9,8 @@ type: software
 license: MIT
 version: 1.0.0
 date-released: 2026-08-26
-repository-code: "https://github.com/XinyueZhao777/LiveMacroEval"
-url: "https://github.com/XinyueZhao777/LiveMacroEval"
+repository-code: "https://github.com/LiveMacroEval/LiveMacroEval.github.io"
+url: "https://github.com/LiveMacroEval/LiveMacroEval.github.io"
 keywords:
   - macroeconomic nowcasting
   - large language models

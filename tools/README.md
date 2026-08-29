@@ -1,7 +1,7 @@
 # LiveMacroEval website — tooling
 
 The published site is `../docs/`, served by GitHub Pages at
-**https://xinyuezhao777.github.io/LiveMacroEval/**. This folder holds the
+**https://livemacroeval.github.io/**. This folder holds the
 machinery that maintains it. Nothing here is published.
 
 ```
